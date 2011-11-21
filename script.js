@@ -21,10 +21,11 @@ function init() {
 		var $s = $(slide).hide();
 
 		var $sdiv = $s.find("div");
-		if (!$s.hasClass("nocode") && $sdiv.length > 0) {
+
+		if (!$s.hasClass("nosim") && $sdiv.length > 0) {
 			var $div = $sdiv.last();
 			$div.remove();
-			$s.data("code", $div.text().trim());
+			$s.data("simulator", $div.text().trim());
 		}
 
 		var $content = $('<div class="content"/>');
@@ -54,22 +55,30 @@ function init() {
 			$toc.append($entry);
 
 		}
-		if ($s.hasClass("nocode")) {
-			$h2.addClass("nocode");
+
+		if ($s.hasClass("nosim")) {
+			$h2.addClass("nosim");
 		}
 	});
+
+	$editor = $("#simulator");
+	// $editor.insertBefore("#slides");
 
 }
 
 function showToc() {
 	$("#toc").show();
 	$("#slides").hide();
+	$editor.hide();
+	// $('body').removeClass("simulator");
 	$("#tocbtn").text("SLIDES");
 }
 
 function hideToc() {
 	$("#toc").hide();
 	$("#slides").show();
+	// $editor.insertBefore("#slides");
+	$editor.show();
 	$("#tocbtn").text("INDEX");
 }
 
@@ -80,7 +89,7 @@ function show(i) {
 	// if a slide is already onscreen, hide it and store its code
 	if(slide != null) {
 		var $oldSlide = $(slide).hide();
-		if (!$oldSlide.hasClass("nocode")) {
+		if (!$oldSlide.hasClass("nosim")) {
 			// $oldSlide.data("code", editor.getValue());
 		}
 	}
@@ -92,16 +101,13 @@ function show(i) {
 	var $s = $(slide).show();
 
 	// load stored code, or hide code box
-	if ($s.hasClass("nocode")) {
-		// $editor.hide();
-		// $output.hide();
+	if ($s.hasClass("nosim")) {
+		$editor.hide();
 	} else {
-		// $editor.show();
-		// $output.show().empty();
-		// editor.setValue($s.data("code"));
-		// editor.focus();
+		$editor.show();
+		$editor.html("<iframe src=" + (i+1) + ".html  width=100% height=100%>");
 	}
-
+	
 	// update url fragment
 	var url = location.href;
 	var j = url.indexOf("#");

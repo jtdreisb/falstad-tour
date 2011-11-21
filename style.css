@@ -48,6 +48,7 @@ h1, h2, h3 {
 	font-family: 'Droid Sans', sans-serif;
 	margin-top: 10px;
 }
+
 h1 {
 	color: #fff;
 	background-color: #444;
@@ -56,70 +57,47 @@ h1 {
 	height: 40px;
 }
 
-pre, code, .codemirror pre {
+pre, .codemirror pre {
 	font-family: 'Droid Sans Mono', monospace;
 }
+
 code, pre {
 	color: #006;
 }
-.codemirror pre, #output pre {
-	color: inherit;
+applet {
+	height: 95%;
+	width:100%
 }
-.codemirror {
-	line-height: 1.4em;
-}
-#code {
+
+#simulator {
 	border-right: 1px solid black;
-	border-bottom: 1px solid black;
+	/*border-bottom: 1px solid black;*/
 	background: #FFD;
 	position: absolute;
 	top: 56px;
 	left: 0;
-	right: 50%;
-	bottom: 20%;
+	right: 40%;
+	bottom: 0%;
 	padding-top: 2px;
 }
-#code .codemirror-scroll {
-	height: 100%;
-}
-#output {
-	border-right: 1px solid black;
-	position: absolute;
-	top: 80%;
-	bottom: 0;
-	left: 0;
-	right: 50%;
-	overflow: auto;
-	padding: 4px;
-}
-#output .loading {
-	color: #666;
-	margin-top: 1em;
-	text-align: center;
-}
-#output.error {
-	color: #B00;
-}
-#code .errLine {
-	background: #FDD !important;
-}
+
 #run {
 	position: absolute;
 	z-index: 10;
 	right: 20px;
 }
-
 .content {
 	position: absolute;
 	padding-left: 8px;
 	padding-right: 4px;
-	left: 50%;
+	left: 60%;
 	right: 0;
 	top: 56px;
 	bottom: 0;
 	overflow: auto;
 }
-.nocode .content {
+
+.nosim .content {
 	left: 0;
 }
 
@@ -150,11 +128,12 @@ button:hover {
 	clear: right;
 }
 
-h2.nocode {
+h2.nosim {
 	text-align: center;
 	font-size: 300%;
 	margin-bottom: 1em;
 }
+
 .toc {
 	display: none;
 	visibility: hidden;
@@ -184,9 +163,11 @@ table.matrix td {
 	text-align: center;
 	padding: 10px;
 }
+
 table.matrix td.good {
 	background: #bfb;
 }
+
 table.matrix td.bad {
 	background: #fbb;
 }
