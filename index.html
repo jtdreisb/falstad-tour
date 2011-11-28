@@ -14,16 +14,6 @@
 
 <body class="loading">
 
-<!-- Applet  
-<applet code="circuit/Circuit.class" archive="circuit/circuit.jar" width=640 height=450>
-Sorry, you need a Java-enabled browser to see the simulation.
-<param name=pause value=20>
-<param name=startCircuit value="circuit/circuits/ohms.txt">
-<param name=startLabel   value="Ohm's Law">
-<param name=useFrame     value="false">
-</applet>
- -->
-
 <!-- Top bar -->
 <h2 id="slidenum"></h2>
 <div id="topnav" class="nav">
@@ -58,85 +48,139 @@ Sorry, you need a Java-enabled browser to see the simulation.
 	Try it on <a href=http://falstad.com/circuit>falstad.com</a> website
 </div>
 
-<div class="toc">Voltage Divider</div>
-
 <div class="slide">
-	<h2>Ohm's Law</h2>
+	<h2>Introduction<h2> <h4>AC Summing Circuit</h4>
 	<p>
-	This is a demonstration of ohms law
+	The purpose of this tutorial is to provide a basic understanding of the various 	tools available to you with the Falstad Circuit simulator.
+	<p>
+	A negative voltage is indicated by a red color, where a positive is green. Moving yellow dots indicate current.
+	<p>
+	To speed up the simulation, if you want to see the steady state response, you simply need to slide the Simulation speed bar to the right. If you want to slow the simulation down, when viewing a higher frequency AC input, slide the 	Simulation speed bar to the left.
+	<p>
+	To speed up or slow down the current animation, move the current bar to the right 	or left.
 </div>
 
-<div class="toc">Hello</div>
+<div class="slide">
+<h2>Moving Components<h2> <h3>Ohm's Law</h3>
+</div>
+
 
 <div class="slide">
-	<h2>Adding Components: Simple Diode Circuit</h2>
+	<h2>Adding Components</h2> <h4>Simple Diode Circuit</h4>
 	<p>
 	Here is a demonstration of how to add components to your circuit
-	<br><br>
+	<p>
 	Your screen should be blank, now to add some components:
-	<br>
-	1: move your cursor to any black space, right-click --> Inputs/Outputs --> Add Voltage Source (2-Terminal)
-	<br>
-	2: click and drag to where you want your voltage source; if you don't like your placement,
-	   you can right-click in the black space and click "Select/Drag Selected" so you can move your component
-	<br>
-	3: Next add a diode (in the Active Components list) and a resistor to your circuit in series
-	<br>
-	4: To connect your components, you can hit "w" on your keyboard, or right-click and click "wire";
-	   Now simply click and drag where you want your wires to go
-	<br><br>
+	<ol>
+		<li>
+		Move your cursor to any black space, right-click --> Inputs/Outputs --> Add Voltage Source (2-Terminal)
+		<li>
+		Click and drag to where you want your voltage source; if you don't like your placement, you can right-click in the black space and click "Select/Drag Selected" so you can move your component
+		<li>
+		Next add a diode (in the Active Components list) and a resistor to your circuit in series
+		<li>
+		To connect your components, you can hit "w" on your keyboard, or right-click and click "wire"
+		<li>
+		Now simply click and drag where you want your wires to go
+	</ol>
 	You are now able to add components to any circuit; you can always delete any components on your circuit
 	by right-clicking on it and clicking "delete" in the menu
 	
 </div>
 
+<div class="slide">
+	<h2>Editing Component Values<h2> <h4>Integrator Op-Amp</h4>
+	<p>
+	Here is a demonstration of how to edit component values with an Integrator Circuit
+	<p>
+	As we can see from the graphs at the bottom of the circuit, the integrator outputs 	the integral of the input AC voltage. Editing component signals is a fairly simple 	process.
+	<ol>
+		<li>
+		Move your cursor over the 80Hz square wave input, right click, and choose edit
+			Here we can see various characteristics of the AC wave.
+		<li>
+		Try changing the Waveform to a triangle wave. You can see how the input and output waves change on the graph.
+		<li>
+		Now change the frequency to 40 Hz and set the DC offset to 90.
+		<li>
+		If we set the DC offset to 10, we can see that this Integrator circuit cannot handle the input.
+	</ol>
+	<p>
+	All of the components in the simulator can be edited in this way.
+</div>
+
 
 <div class="slide">
-<h2>Exporting Circuits: JFET Amplifier</h2>
-<p>
-Here is a demonstration on how to export the circuits you have made.
-<br>
-We will export this example JFET Amplifier. 
-<br><br>
-After you are done with this circuit (adding components, moving pieces around, etc...), you are ready to export:
-<br>
-1: move your cursor to any black space in the area where you design your circuits
-<br>
-2: right-click --> File --> Export
-<br>
-3: highlight and copy all the information that pops up in the export window, then click "Close"
-<br><br>
-Now you are ready to import, learn how on the next page
+	<h2>Reading Component Values</h2> <h4>Wave Rectifier</h4>
+	<p>
+	Here is a demonstration of how to read component values with a Wave Rectifier.
+	<ol>
+		<li>
+		First we want to slow down the simulation, Drag the simulation speed bar to the left until you can observe the simulation time moving at about .01ms/ second
+		<li>
+		Put your cursor over the load resistance. The simulator provides the current, voltage drop, resistance value and power dissapation of the component.
+		<li>
+		Now speed up the simulation and put your cursor over any of the diodes. When the voltage across the diode is below about .6V, the current is 0
+	</ol>
 </div>
 
 <div class="slide">
-<h2>Importing Circuits: Common BJT Emitter Amplifier</h2>
-<p>
-Here is a demonstration on how to import the circuits you have made
-<br><br>
-Now that you have the exported information copied, you are ready to import:
-<br>
-1: This screen is blank, but we want our JFET Amplifier circuit, so move your cursor to a black area
-<br>
-2: right-click --> File --> Import
-<br>
-3: paste the information into the import box and click "Import"
-<br><br>  
-Now your circuit should appear in the circuit design, just as you had it before, ready to be edited once again
-<br><br><br>
-We are now going to use this imported JFET Amplifier circuit and modify it to make a BJT Amplifier:
-<br>
-1: First of all, delete the JFET, and add a BJT in its place (NPN type), also delete the 1uF and 100uF capacitors
-<br>
-2: Move the 50k ohm resistor to connect to the base of the BJT and ground, also add another resistor connecting the 10V 
-   source and the base of the BJT
-<br>
-3: Now connect the "out" terminal to the collector of the BJT
-<br>
-4: Place wire if there are any other missing connections in your circuit
-<br>
-5: You now have a sample BJT circuit, feel free add, delete, and move components as you please, as well
-   as edit their values
+<h2>Graphs<h2> <h4>Clipper </h2>
+</div>
+
+
+<div class="slide">
+<h2>Graphs</h2> <h4>Clamper</h4>
+</div>
+
+
+<div class="slide">
+	<h2>Exporting Circuits</h2> <h4>JFET Amplifier</h4>
+	<p>
+	Here is a demonstration on how to export the circuits you have made.
+	<p>
+	We will export this example JFET Amplifier. 
+	<p>
+	After you are done with this circuit (adding components, moving pieces around, etc...), you are ready to export:
+	<ol>
+		<li>
+		Move your cursor to any black space in the area where you design your circuits
+		<li>
+		Right-click --> File --> Export
+		<li>
+		Highlight and copy all the information that pops up in the export window, then click "Close"
+	</ol>
+	Now you are ready to import, learn how on the next page
+</div>
+
+<div class="slide">
+	<h2>Importing Circuits</h2> <h4>Common BJT Emitter Amplifier</h4>
+	<p>
+	Now that you have the exported information copied as described in the last slide, you are ready to import:
+	<ol>
+		<li>
+		This screen is blank, but we want our JFET Amplifier circuit, so move your cursor to a black area
+		<li>
+		Right-click --> File --> Import
+		<li>
+		Paste the information into the import box and click "Import"
+	</ol>
+	Now your circuit should appear in the circuit design, just as you had it before, ready to be edited once again
+	<p>
+	We are now going to use this imported JFET Amplifier circuit and modify it to make a BJT Amplifier:
+	<ol>
+		<li>
+		First, delete the JFET, and add a BJT in its place (NPN type), also delete the 1uF and 100uF capacitors
+		<li>
+		Move the 50k ohm resistor to connect to the base of the BJT and ground, also add another resistor connecting the 10V 
+		   source and the base of the BJT
+		<li>
+		Now connect the "out" terminal to the collector of the BJT
+		<li>
+		Place wire if there are any other missing connections in your circuit
+		<li>
+		You now have a sample BJT circuit, feel free add, delete, and move components as you please, as well as edit their values
+	</ol>
 </div>
 
 </div><!-- end slides -->

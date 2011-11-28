@@ -3,8 +3,9 @@ body {
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-top: 0px;
-	font-size: 120%;
+	/*font-size: 120%;*/
 }
+
 #topnav {
 	position: absolute;
 	top: 0;
@@ -64,32 +65,24 @@ pre, .codemirror pre {
 code, pre {
 	color: #006;
 }
-applet {
-	height: 95%;
-	width:100%
-}
 
 #simulator {
 	border-right: 1px solid black;
 	/*border-bottom: 1px solid black;*/
-	background: #FFD;
+	background: #FFF;
 	position: absolute;
 	top: 56px;
 	left: 0;
 	right: 40%;
 	bottom: 0%;
-	padding-top: 2px;
+	padding-top: 0px;
 }
 
-#run {
-	position: absolute;
-	z-index: 10;
-	right: 20px;
-}
 .content {
 	position: absolute;
 	padding-left: 8px;
 	padding-right: 4px;
+	background: #DDD;
 	left: 60%;
 	right: 0;
 	top: 56px;
@@ -107,7 +100,7 @@ hr {
 
 button {
 	display: inline;
-	font-size: 60%;
+	font-size: 70%;
 	font-family: 'Droid Sans', sans-serif;
 	color: #000;
 	background-color: #eee;
@@ -147,6 +140,7 @@ h2.nosim {
 .loading #slidenum {
 	display: none;
 }
+
 #loading {
 	margin-top: 20%;
 	font-size: 150%;
@@ -156,18 +150,4 @@ h2.nosim {
 }
 .loading #loading {
 	display: block;
-}
-
-table.matrix td {
-	font-size: 120%;
-	text-align: center;
-	padding: 10px;
-}
-
-table.matrix td.good {
-	background: #bfb;
-}
-
-table.matrix td.bad {
-	background: #fbb;
 }
