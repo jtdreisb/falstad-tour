@@ -36,16 +36,19 @@
 
 <div id="slides" class="slides"><!-- begin slides -->
 
-<div class="toc">Welcome</div>
-
 
 <div class="slide nosim">
 	<h2>Welcome</h2>
-	<p>
-	This tour is also available as a stand-alone program that you can use
-	without access to the internet.
-	<p>
-	Try it on <a href=http://falstad.com/circuit>falstad.com</a> website
+	
+	<p> This tour of the falstad circuit simulator was developed for Jeff Gerfen's EE-346 Laboratory Final Project by 
+	<ul>
+		<li> Jason Dreisbach
+		<li> Jonathan Brophy
+		<li> Matthew Crussel
+	</ul>
+	<p> This simulator was originally developed by <a href=http://falstad.com>Paul Falstad</a> and requires a java runtime.
+	<p> After working through this walkthrough try the simulator on <a href=http://falstad.com/circuit>falstad.com</a>
+	<p> Good Luck!
 </div>
 
 <div class="slide">
@@ -56,12 +59,19 @@
 	A negative voltage is indicated by a red color, where a positive is green. Moving yellow dots indicate current.
 	<p>
 	To speed up the simulation, if you want to see the steady state response, you simply need to slide the Simulation speed bar to the right. If you want to slow the simulation down, when viewing a higher frequency AC input, slide the 	Simulation speed bar to the left.
-	<p>
-	To speed up or slow down the current animation, move the current bar to the right 	or left.
+	<p> 
+	To speed up or slow down the current animation, move the current bar to the right or left.
 </div>
 
 <div class="slide">
-<h2>Moving Components<h2> <h3>Ohm's Law</h3>
+	<h2>Moving Components<h2> <h3>Ohm's Law</h3>
+	<p> When the simulator starts up it defaults to the move/drag mode. Ensure that the simulator is in drag mode by right clicking on a black part of the simulator and verify that the checkmark is next to the menu item titled 'Select/Drag Selected...'
+	<p> Try dragging one of the resistors to connect the right branch to ground.
+	<p> Note that the current begins to flow once the circuit is completed. Also, the current displayed passing through the wire satisfies the Ohm's Law relationship <code>V=I*R</code></p>
+	<p> Next, drag the two remaining resistors into the circuit to complete the left branch of the circuit.
+	<p> Confirm that the current passing through both the left and the right branch sum to equal the current provided by the source. 
+
+	<p> Feel free to experiment with different resistor and source values before moving on
 </div>
 
 
@@ -96,8 +106,7 @@
 	As we can see from the graphs at the bottom of the circuit, the integrator outputs 	the integral of the input AC voltage. Editing component signals is a fairly simple 	process.
 	<ol>
 		<li>
-		Move your cursor over the 80Hz square wave input, right click, and choose edit
-			Here we can see various characteristics of the AC wave.
+		Move your cursor over the 80Hz square wave input, right click, and choose edit so we can see various characteristics of the AC wave.
 		<li>
 		Try changing the Waveform to a triangle wave. You can see how the input and output waves change on the graph.
 		<li>
@@ -128,12 +137,6 @@
 <h2>Graphs<h2> <h4>Clipper </h2>
 </div>
 
-
-<div class="slide">
-<h2>Graphs</h2> <h4>Clamper</h4>
-</div>
-
-
 <div class="slide">
 	<h2>Exporting Circuits</h2> <h4>JFET Amplifier</h4>
 	<p>
@@ -146,7 +149,7 @@
 		<li>
 		Move your cursor to any black space in the area where you design your circuits
 		<li>
-		Right-click --> File --> Export
+		Right-click->File->Export
 		<li>
 		Highlight and copy all the information that pops up in the export window, then click "Close"
 	</ol>
@@ -154,14 +157,14 @@
 </div>
 
 <div class="slide">
-	<h2>Importing Circuits</h2> <h4>Common BJT Emitter Amplifier</h4>
+	<h2>Importing Circuits</h2> <h4>Common Emitter BJT Amplifier</h4>
 	<p>
 	Now that you have the exported information copied as described in the last slide, you are ready to import:
 	<ol>
 		<li>
 		This screen is blank, but we want our JFET Amplifier circuit, so move your cursor to a black area
 		<li>
-		Right-click --> File --> Import
+		Right-click->File->Import
 		<li>
 		Paste the information into the import box and click "Import"
 	</ol>

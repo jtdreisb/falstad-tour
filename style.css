@@ -3,7 +3,6 @@ body {
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-top: 0px;
-	/*font-size: 120%;*/
 }
 
 #topnav {
@@ -68,7 +67,6 @@ code, pre {
 
 #simulator {
 	border-right: 1px solid black;
-	/*border-bottom: 1px solid black;*/
 	background: #FFF;
 	position: absolute;
 	top: 56px;
